@@ -8,7 +8,7 @@
 <meta property="og:description" content="I help businesses understand what their numbers are telling them, and decide what to do next.">
 <meta property="og:image" content="https://estefaniabarrosa.github.io/estefania.jpg">
 <title>Estefanía Barrosa</title>
-<meta name="description" content="Hi, I'm Estefanía. I help businesses understand their numbers and decide what to do next. Data, operations and marketing, from Lisbon.">
+<meta name="description" id="metaDesc" content="Hi, I'm Estefanía. I help businesses understand their numbers and decide what to do next. Data, operations and marketing, from Lisbon.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Nunito+Sans:ital,opsz,wght@0,6..12,400;0,6..12,600;0,6..12,700;1,6..12,400&display=swap">
@@ -55,6 +55,10 @@ p{margin:0}
 .top .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-block:22px}
 .name{font-family:var(--f-display);font-size:1.25rem;text-decoration:none;color:var(--ink)}
 .top a.small{font-weight:700;text-decoration:none}
+.top .right{display:flex;align-items:center;gap:18px}
+.lang{font:inherit;font-weight:700;font-size:.85rem;letter-spacing:.06em;color:var(--ink);background:transparent;border:1.5px solid var(--line);border-radius:999px;padding:6px 12px;cursor:pointer}
+.lang:hover{border-color:var(--ink)}
+.lang:focus-visible{outline:2px solid var(--sage);outline-offset:3px}
 
 /* hello */
 .hello .wrap{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,6vw,72px);align-items:center;padding-block:clamp(16px,4vw,48px) clamp(48px,7vw,88px)}
@@ -144,7 +148,10 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;
 <header class="top">
   <div class="wrap">
     <a class="name" href="#top">Estefanía Barrosa</a>
-    <a class="small" href="#talk">Let's talk →</a>
+    <div class="right">
+      <button class="lang" type="button" id="langBtn" lang="es" aria-label="Ver en español">ES</button>
+      <a class="small" href="#talk" data-i18n="nav_talk">Let's talk →</a>
+    </div>
   </div>
 </header>
 
@@ -152,16 +159,16 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;
   <section class="hello">
     <div class="wrap">
       <div>
-        <p class="kicker">Data · Operations · Marketing</p>
-        <h1>Hi, I'm Estefanía.</h1>
-        <p class="lead">I help businesses understand what their numbers are telling them, and decide what to do next. Simple, clear, and always connected to real people and real decisions.</p>
+        <p class="kicker" data-i18n="kicker_hero">Data · Operations · Marketing</p>
+        <h1 data-i18n="h1">Hi, I'm Estefanía.</h1>
+        <p class="lead" data-i18n="lead">I help businesses understand what their numbers are telling them, and decide what to do next. Simple, clear, and always connected to real people and real decisions.</p>
         <div class="cta">
-          <a class="btn btn-primary" href="#talk">Let's talk</a>
-          <a class="btn btn-soft" href="#about">Get to know me</a>
+          <a class="btn btn-primary" href="#talk" data-i18n="cta_talk">Let's talk</a>
+          <a class="btn btn-soft" href="#about" data-i18n="cta_about">Get to know me</a>
         </div>
       </div>
       <figure class="photo">
-        <img src="estefania.jpg" alt="Estefanía Barrosa smiling, wearing glasses and a white shirt" width="1000" height="1333">
+        <img src="estefania.jpg" alt="Estefanía Barrosa smiling, wearing glasses and a white shirt" data-i18n-alt="alt_hero" width="1000" height="1333">
       </figure>
     </div>
   </section>
@@ -169,14 +176,14 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;
   <section class="about" id="about">
     <div class="wrap">
       <div>
-        <p class="kicker">A little about me</p>
-        <h2>From kitchens to data, with the same curiosity</h2>
+        <p class="kicker" data-i18n="kicker_about">A little about me</p>
+        <h2 data-i18n="h_about">From kitchens to data, with the same curiosity</h2>
       </div>
       <div class="letter">
-        <p>I started in hospitality. I studied Hotel Administration in Caracas and spent years in kitchens and hotels, where I learned that good service depends on planning, details and knowing your customer.</p>
-        <p>In Barcelona I helped run an artisan gelato shop. I forecast demand for every flavour, costed every recipe and built the sales tracking we used to decide what to make. That season, sales grew <strong>65%</strong>. That's when I understood that numbers can be a very human tool.</p>
-        <p>Since 2023 I live in Lisbon. I work in operations and quality for international platforms, and as acting supervisor I helped a team of 15 go from about 60% to <strong>85% quality</strong>. On the side I help small brands read their marketing results and decide where to put their energy.</p>
-        <p>This year I added the technical side with SQL, Python and Tableau, so now I can go from the raw data to the decision on my own.</p>
+        <p data-i18n="about1">I started in hospitality. I studied Hotel Administration in Caracas and spent years in kitchens and hotels, where I learned that good service depends on planning, details and knowing your customer.</p>
+        <p data-i18n="about2">In Barcelona I helped run an artisan gelato shop. I forecast demand for every flavour, costed every recipe and built the sales tracking we used to decide what to make. That season, sales grew <strong>65%</strong>. That's when I understood that numbers can be a very human tool.</p>
+        <p data-i18n="about3">Since 2023 I live in Lisbon. I work in operations and quality for international platforms, and as acting supervisor I helped a team of 15 go from about 60% to <strong>85% quality</strong>. On the side I help small brands read their marketing results and decide where to put their energy.</p>
+        <p data-i18n="about4">This year I added the technical side with SQL, Python and Tableau, so now I can go from the raw data to the decision on my own.</p>
         <p class="sig">Estefanía</p>
       </div>
     </div>
@@ -184,20 +191,20 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;
 
   <section class="block">
     <div class="wrap">
-      <p class="kicker">What people come to me for</p>
-      <h2>If one of these sounds like you, let's talk</h2>
+      <p class="kicker" data-i18n="kicker_help">What people come to me for</p>
+      <h2 data-i18n="h_help">If one of these sounds like you, let's talk</h2>
       <div class="help">
         <article>
-          <p class="q">"We have lots of data, but we don't know what it's telling us."</p>
-          <p>I turn it into clear reports and dashboards with the few numbers that matter, and what they mean.</p>
+          <p class="q" data-i18n="q1">"We have lots of data, but we don't know what it's telling us."</p>
+          <p data-i18n="a1">I turn it into clear reports and dashboards with the few numbers that matter, and what they mean.</p>
         </article>
         <article>
-          <p class="q">"Something changed, and we don't know why."</p>
-          <p>Sales, quality or conversion dropped? I look for the real cause, so you fix the right thing.</p>
+          <p class="q" data-i18n="q2">"Something changed, and we don't know why."</p>
+          <p data-i18n="a2">Sales, quality or conversion dropped? I look for the real cause, so you fix the right thing.</p>
         </article>
         <article>
-          <p class="q">"Reporting takes us hours every week."</p>
-          <p>I organise how the work flows and automate the repetitive parts, so your team can focus on deciding.</p>
+          <p class="q" data-i18n="q3">"Reporting takes us hours every week."</p>
+          <p data-i18n="a3">I organise how the work flows and automate the repetitive parts, so your team can focus on deciding.</p>
         </article>
       </div>
     </div>
@@ -205,28 +212,28 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;
 
   <section class="block" style="padding-top:0">
     <div class="wrap" style="padding-top:0">
-      <p class="kicker">Things I've worked on</p>
-      <h2>A few projects, and what I found</h2>
+      <p class="kicker" data-i18n="kicker_work">Things I've worked on</p>
+      <h2 data-i18n="h_work">A few projects, and what I found</h2>
       <ul class="work-list">
         <li>
-          <h3>What makes marketplace customers happy?</h3>
-          <a href="https://github.com/estefaniabarrosa/olist-end-to-end-data-analytics" target="_blank" rel="noopener">See project ↗</a>
-          <p>I analysed almost 100K orders from a Brazilian marketplace. On-time delivery mattered far more for satisfaction than any marketing channel.</p>
+          <h3 data-i18n="w1h">What makes marketplace customers happy?</h3>
+          <a href="https://github.com/estefaniabarrosa/olist-end-to-end-data-analytics" target="_blank" rel="noopener" data-i18n="see_project">See project ↗</a>
+          <p data-i18n="w1p">I analysed almost 100K orders from a Brazilian marketplace. On-time delivery mattered far more for satisfaction than any marketing channel.</p>
         </li>
         <li>
-          <h3>Did the website redesign really work?</h3>
-          <a href="https://github.com/estefaniabarrosa/CX_Vanguard_Project" target="_blank" rel="noopener">See project ↗</a>
-          <p>An A/B test with 70K clients. More people finished the process, but more people also made mistakes, so I recommended keeping it and fixing those steps.</p>
+          <h3 data-i18n="w2h">Did the website redesign really work?</h3>
+          <a href="https://github.com/estefaniabarrosa/CX_Vanguard_Project" target="_blank" rel="noopener" data-i18n="see_project">See project ↗</a>
+          <p data-i18n="w2p">An A/B test with 70K clients. More people finished the process, but more people also made mistakes, so I recommended keeping it and fixing those steps.</p>
         </li>
         <li>
-          <h3>Which campaigns deserve the budget?</h3>
-          <a href="https://estefaniabarrosa.github.io/consulting-portfolio/" target="_blank" rel="noopener">See case studies ↗</a>
-          <p>Marketing reports for small businesses. For a Brazilian production company, clicks on ads went from 0.32% to 0.53% between two periods, and we adjusted creatives and budget from there.</p>
+          <h3 data-i18n="w3h">Which campaigns deserve the budget?</h3>
+          <a href="https://estefaniabarrosa.github.io/consulting-portfolio/" target="_blank" rel="noopener" data-i18n="see_cases">See case studies ↗</a>
+          <p data-i18n="w3p">Marketing reports for small businesses. For a Brazilian production company, clicks on ads went from 0.32% to 0.53% between two periods, and we adjusted creatives and budget from there.</p>
         </li>
         <li>
-          <h3>Which customers are about to leave?</h3>
-          <a href="https://github.com/estefaniabarrosa" target="_blank" rel="noopener">See on GitHub ↗</a>
-          <p>A model that spots 74% of customers at risk and groups them so a team knows who to call first.</p>
+          <h3 data-i18n="w4h">Which customers are about to leave?</h3>
+          <a href="https://github.com/estefaniabarrosa" target="_blank" rel="noopener" data-i18n="see_gh">See on GitHub ↗</a>
+          <p data-i18n="w4p">A model that spots 74% of customers at risk and groups them so a team knows who to call first.</p>
         </li>
       </ul>
     </div>
@@ -235,11 +242,11 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;
   <section class="lisbon">
     <div class="wrap">
       <figure class="photo">
-        <img src="belem.jpg" alt="Estefanía at Belém Tower in Lisbon" width="1000" height="1500" loading="lazy">
+        <img src="belem.jpg" alt="Estefanía at Belém Tower in Lisbon" data-i18n-alt="alt_belem" width="1000" height="1500" loading="lazy">
       </figure>
       <blockquote>
-        "I grew up between Caracas and Spain, and now I live in Lisbon. I work in Spanish, English and Portuguese, and I love helping people who are building something of their own."
-        <cite>Belém, Lisbon</cite>
+        <span data-i18n="bq">"I grew up between Caracas and Spain, and now I live in Lisbon. I work in Spanish, English and Portuguese, and I love helping people who are building something of their own."</span>
+        <cite data-i18n="cite">Belém, Lisbon</cite>
       </blockquote>
     </div>
   </section>
@@ -248,18 +255,18 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;
     <div class="wrap">
       <div class="side">
         <div>
-          <p class="kicker">Let's talk</p>
-          <h2>Tell me what you're working on</h2>
-          <p>A team, a project or just an idea. Write me a few lines and I'll get back to you in one or two days.</p>
+          <p class="kicker" data-i18n="cta_talk">Let's talk</p>
+          <h2 data-i18n="h_talk">Tell me what you're working on</h2>
+          <p data-i18n="p_talk">A team, a project or just an idea. Write me a few lines and I'll get back to you in one or two days.</p>
         </div>
         <figure class="photo">
-          <img src="estefania-desk.jpg" alt="Estefanía sitting at her desk" width="1000" height="1333" loading="lazy">
+          <img src="estefania-desk.jpg" alt="Estefanía sitting at her desk" data-i18n-alt="alt_desk" width="1000" height="1333" loading="lazy">
         </figure>
         <div class="mailrow">
           <span class="mail" id="mail">estefaniabarrosa.rz@gmail.com</span>
-          <button class="copy" type="button" id="copyMail">Copy</button>
+          <button class="copy" type="button" id="copyMail" data-i18n="copy">Copy</button>
         </div>
-        <a class="btn btn-soft" id="bookBtn" href="#" target="_blank" rel="noopener" hidden>Book a 20 minute call ↗</a>
+        <a class="btn btn-soft" id="bookBtn" href="#" target="_blank" rel="noopener" hidden data-i18n="book">Book a 20 minute call ↗</a>
         <div class="links">
           <a href="https://www.linkedin.com/in/estefania-dataanalysis/" target="_blank" rel="noopener">LinkedIn</a>
           <a href="https://www.instagram.com/estefania.barrosa/" target="_blank" rel="noopener">Instagram</a>
@@ -270,22 +277,22 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;
       <form id="contactForm" novalidate>
         <input class="hp" type="text" name="_honey" id="f-honey" tabindex="-1" autocomplete="off" aria-hidden="true">
         <div class="two">
-          <div class="field"><label for="f-name">Your name</label><input id="f-name" name="name" autocomplete="name" required></div>
+          <div class="field"><label for="f-name" data-i18n="l_name">Your name</label><input id="f-name" name="name" autocomplete="name" required></div>
           <div class="field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
         </div>
-        <div class="field"><label for="f-company">Company <span class="opt">(optional)</span></label><input id="f-company" name="company" autocomplete="organization"></div>
+        <div class="field"><label for="f-company" data-i18n="l_company">Company <span class="opt">(optional)</span></label><input id="f-company" name="company" autocomplete="organization"></div>
         <fieldset>
-          <legend>What would you like to talk about?</legend>
+          <legend data-i18n="legend">What would you like to talk about?</legend>
           <div class="topics">
-            <input type="radio" name="topic" id="t-team" value="My team"><label for="t-team">My team</label>
-            <input type="radio" name="topic" id="t-project" value="A project"><label for="t-project">A project</label>
-            <input type="radio" name="topic" id="t-other" value="Something else" checked><label for="t-other">Something else</label>
+            <input type="radio" name="topic" id="t-team" value="My team"><label for="t-team" data-i18n="t_team">My team</label>
+            <input type="radio" name="topic" id="t-project" value="A project"><label for="t-project" data-i18n="t_project">A project</label>
+            <input type="radio" name="topic" id="t-other" value="Something else" checked><label for="t-other" data-i18n="t_other">Something else</label>
           </div>
         </fieldset>
-        <div class="field"><label for="f-msg">Message</label><textarea id="f-msg" name="message" required placeholder="Hi Estefanía, I'd love to talk about…"></textarea></div>
-        <label class="optin" for="f-news"><input type="checkbox" id="f-news" name="newsletter"><span>Send me occasional emails with data tips and news. I can unsubscribe anytime.</span></label>
-        <p class="privacy">I only use your email to reply to you, and to send news if you tick the box.</p>
-        <button class="btn btn-primary" type="submit" id="sendBtn">Send message</button>
+        <div class="field"><label for="f-msg" data-i18n="l_msg">Message</label><textarea id="f-msg" name="message" required placeholder="Hi Estefanía, I'd love to talk about…" data-i18n-ph="ph_msg"></textarea></div>
+        <label class="optin" for="f-news"><input type="checkbox" id="f-news" name="newsletter"><span data-i18n="optin">Send me occasional emails with data tips and news. I can unsubscribe anytime.</span></label>
+        <p class="privacy" data-i18n="privacy">I only use your email to reply to you, and to send news if you tick the box.</p>
+        <button class="btn btn-primary" type="submit" id="sendBtn" data-i18n="send">Send message</button>
         <p class="status" id="status" role="status" aria-live="polite"></p>
       </form>
     </div>
@@ -294,46 +301,157 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;
 
 <footer>
   <div class="wrap">
-    <span>Estefanía Barrosa Ruiz · Lisbon</span>
+    <span data-i18n="footer_city">Estefanía Barrosa Ruiz · Lisbon</span>
     <span>Español · English · Português</span>
   </div>
 </footer>
 
 <script>
-// Settings: add your Google Calendar booking link to BOOKING_URL to show the call button.
+// Settings
 const SETTINGS = {
   EMAIL: "estefaniabarrosa.rz@gmail.com",
-  FORM_ENDPOINT: "https://formsubmit.co/ajax/estefaniabarrosa.rz@gmail.com",
+  FORM_ENDPOINT: "__FORM_ENDPOINT__",
   BOOKING_URL: "https://calendar.app.google/yP1H6MWSKKECt71j9"
 };
+
+/* Language: ?lang=es or ?lang=en wins, then the visitor's last choice, then the browser language. English is the default. */
+const ES = {
+ "nav_talk": "Hablemos →",
+ "kicker_hero": "Datos · Operaciones · Marketing",
+ "h1": "Hola, soy Estefanía.",
+ "lead": "Ayudo a negocios a entender lo que dicen sus números y a decidir qué hacer después. Simple, claro y siempre conectado con personas y decisiones reales.",
+ "cta_talk": "Hablemos",
+ "cta_about": "Conóceme",
+ "kicker_about": "Un poco sobre mí",
+ "h_about": "De la cocina a los datos, con la misma curiosidad",
+ "about1": "Empecé en hostelería. Estudié Administración Hotelera en Caracas y pasé años en cocinas y hoteles, donde aprendí que un buen servicio depende de planificar, de los detalles y de conocer a tu cliente.",
+ "about2": "En Barcelona ayudé a llevar una heladería artesanal. Calculaba la demanda de cada sabor, el coste de cada receta y armé el seguimiento de ventas que usábamos para decidir qué preparar. Esa temporada las ventas crecieron un <strong>65%</strong>. Ahí entendí que los números pueden ser una herramienta muy humana.",
+ "about3": "Desde 2023 vivo en Lisboa. Trabajo en operaciones y calidad para plataformas internacionales, y como supervisora ayudé a un equipo de 15 personas a pasar de un 60% a un <strong>85% de calidad</strong>. Además ayudo a pequeñas marcas a leer sus resultados de marketing y a decidir dónde poner su energía.",
+ "about4": "Este año sumé la parte técnica con SQL, Python y Tableau, así que ahora puedo ir del dato en bruto a la decisión yo sola.",
+ "kicker_help": "Por qué me buscan",
+ "h_help": "Si alguna de estas frases te suena, hablemos",
+ "q1": "«Tenemos muchos datos, pero no sabemos qué nos dicen.»",
+ "a1": "Los convierto en informes y dashboards claros, con los pocos números que importan y lo que significan.",
+ "q2": "«Algo cambió y no sabemos por qué.»",
+ "a2": "¿Bajaron las ventas, la calidad o la conversión? Busco la causa real para que arregles lo que de verdad hace falta.",
+ "q3": "«Hacer los informes nos lleva horas cada semana.»",
+ "a3": "Ordeno cómo fluye el trabajo y automatizo lo repetitivo, para que tu equipo se dedique a decidir.",
+ "kicker_work": "En qué he trabajado",
+ "h_work": "Algunos proyectos y lo que encontré",
+ "w1h": "¿Qué hace felices a los clientes de un marketplace?",
+ "w1p": "Analicé casi 100 mil pedidos de un marketplace de Brasil. Llegar a tiempo pesaba mucho más en la satisfacción que cualquier canal de marketing.",
+ "w2h": "¿El rediseño de la web funcionó de verdad?",
+ "w2p": "Un test A/B con 70 mil clientes. Más gente terminó el proceso, pero también hubo más errores, así que recomendé quedarse con el rediseño y arreglar esos pasos.",
+ "w3h": "¿Qué campañas merecen el presupuesto?",
+ "w3p": "Informes de marketing para pequeñas empresas. Para una productora de Brasil, los clics en anuncios pasaron del 0,32% al 0,53% entre dos periodos, y a partir de ahí ajustamos creatividades y presupuesto.",
+ "w4h": "¿Qué clientes están a punto de irse?",
+ "w4p": "Un modelo que detecta el 74% de los clientes en riesgo y los agrupa para que el equipo sepa a quién llamar primero.",
+ "see_project": "Ver proyecto ↗",
+ "see_cases": "Ver casos ↗",
+ "see_gh": "Ver en GitHub ↗",
+ "h_talk": "Cuéntame en qué estás trabajando",
+ "p_talk": "Un equipo, un proyecto o solo una idea. Escríbeme unas líneas y te respondo en uno o dos días.",
+ "copy": "Copiar",
+ "book": "Reserva una llamada de 20 minutos ↗",
+ "l_name": "Tu nombre",
+ "l_company": "Empresa <span class=\"opt\">(opcional)</span>",
+ "legend": "¿De qué te gustaría hablar?",
+ "t_team": "Mi equipo",
+ "t_project": "Un proyecto",
+ "t_other": "Otra cosa",
+ "l_msg": "Mensaje",
+ "optin": "Envíame de vez en cuando emails con consejos de datos y novedades. Puedo darme de baja cuando quiera.",
+ "privacy": "Solo uso tu email para responderte, y para enviarte novedades si marcas la casilla.",
+ "send": "Enviar mensaje",
+ "footer_city": "Estefanía Barrosa Ruiz · Lisboa",
+ "cite": "Belém, Lisboa",
+ "bq": "«Crecí entre Caracas y España, y ahora vivo en Lisboa. Trabajo en español, inglés y portugués, y me encanta ayudar a quien está construyendo algo propio.»",
+ "ph_msg": "Hola Estefanía, me gustaría hablar sobre…",
+ "st_missing": "Escribe tu nombre, tu email y un mensaje corto.",
+ "st_bademail": "Ese email no parece correcto. ¿Lo revisas?",
+ "st_preview": "Esto es una vista previa y el formulario aún no envía. Escríbeme a ",
+ "st_sending": "Enviando…",
+ "st_ok": "¡Gracias, {name}! Recibí tu mensaje y te respondo pronto.",
+ "st_err": "No se pudo enviar el mensaje. Escríbeme a ",
+ "copied": "Copiado",
+ "selected": "Seleccionado",
+ "alt_hero": "Estefanía Barrosa sonriendo, con gafas y camisa blanca",
+ "alt_belem": "Estefanía en la Torre de Belém, en Lisboa",
+ "alt_desk": "Estefanía sentada en su escritorio",
+ "meta_desc": "Hola, soy Estefanía. Ayudo a negocios a entender sus números y a decidir qué hacer después. Datos, operaciones y marketing, desde Lisboa."
+};
+const EN_JS = {
+  st_missing: "Please add your name, email and a short message.",
+  st_bademail: "That email doesn't look right. Could you check it?",
+  st_preview: "This is a preview, so the form doesn't send yet. Please write to ",
+  st_sending: "Sending…",
+  st_ok: "Thank you, {name}! I got your message and I'll reply soon.",
+  st_err: "The message couldn't be sent. Please write to ",
+  copied: "Copied", selected: "Selected"
+};
+const EN = {};
+document.querySelectorAll("[data-i18n]").forEach(el => { if (!(el.dataset.i18n in EN)) EN[el.dataset.i18n] = el.innerHTML; });
+document.querySelectorAll("[data-i18n-alt]").forEach(el => { EN[el.dataset.i18nAlt] = el.alt; });
+document.querySelectorAll("[data-i18n-ph]").forEach(el => { EN[el.dataset.i18nPh] = el.placeholder; });
+const metaDesc = document.getElementById("metaDesc"); EN.meta_desc = metaDesc.content;
+let lang = "en";
+const t = (k) => (lang === "es" ? ES[k] : (EN_JS[k] ?? EN[k])) ?? EN_JS[k] ?? k;
+function setLang(l, save) {
+  lang = l === "es" ? "es" : "en";
+  const dict = lang === "es" ? ES : EN;
+  document.documentElement.lang = lang;
+  document.querySelectorAll("[data-i18n]").forEach(el => { const v = dict[el.dataset.i18n]; if (v != null) el.innerHTML = v; });
+  document.querySelectorAll("[data-i18n-alt]").forEach(el => { el.alt = dict[el.dataset.i18nAlt]; });
+  document.querySelectorAll("[data-i18n-ph]").forEach(el => { el.placeholder = dict[el.dataset.i18nPh]; });
+  metaDesc.content = dict.meta_desc;
+  const btn = document.getElementById("langBtn");
+  btn.textContent = lang === "es" ? "EN" : "ES";
+  btn.lang = lang === "es" ? "en" : "es";
+  btn.setAttribute("aria-label", lang === "es" ? "View in English" : "Ver en español");
+  if (save) { try { localStorage.setItem("lang", lang); } catch (_) {} }
+}
+(function initLang() {
+  let l = null;
+  try { l = new URLSearchParams(location.search).get("lang"); } catch (_) {}
+  if (!l) { try { l = localStorage.getItem("lang"); } catch (_) {} }
+  if (!l) l = (navigator.language || "").toLowerCase().startsWith("es") ? "es" : "en";
+  setLang(l, false);
+})();
+document.getElementById("langBtn").addEventListener("click", () => setLang(lang === "es" ? "en" : "es", true));
+
 const book = document.getElementById("bookBtn");
 if (SETTINGS.BOOKING_URL) { book.href = SETTINGS.BOOKING_URL; book.hidden = false; }
 
 document.getElementById("copyMail").addEventListener("click", (e) => {
   const btn = e.currentTarget;
-  const fallback = () => { const r = document.createRange(); r.selectNodeContents(document.getElementById("mail")); const s = getSelection(); s.removeAllRanges(); s.addRange(r); btn.textContent = "Selected"; };
-  try { navigator.clipboard.writeText(SETTINGS.EMAIL).then(() => { btn.textContent = "Copied"; setTimeout(() => btn.textContent = "Copy", 1800); }, fallback); } catch (_) { fallback(); }
+  const reset = () => setTimeout(() => { btn.textContent = t("copy"); }, 1800);
+  const fallback = () => { const r = document.createRange(); r.selectNodeContents(document.getElementById("mail")); const s = getSelection(); s.removeAllRanges(); s.addRange(r); btn.textContent = t("selected"); reset(); };
+  try { navigator.clipboard.writeText(SETTINGS.EMAIL).then(() => { btn.textContent = t("copied"); reset(); }, fallback); } catch (_) { fallback(); }
 });
 
 const form = document.getElementById("contactForm"), status = document.getElementById("status"), sendBtn = document.getElementById("sendBtn");
 const live = /github\.io$/.test(location.hostname);
+const say = (cls, msg) => { status.className = "status" + (cls ? " " + cls : ""); status.textContent = msg; };
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
-  status.className = "status"; status.textContent = "";
+  say("", "");
   const name = form.name.value.trim(), email = form.email.value.trim(), message = form.message.value.trim();
-  if (!name || !email || !message) { status.className = "status err"; status.textContent = "Please add your name, email and a short message."; return; }
-  if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) { status.className = "status err"; status.textContent = "That email doesn't look right. Could you check it?"; return; }
-  if (!live) { status.className = "status err"; status.textContent = "This is a preview, so the form doesn't send yet. Please write to " + SETTINGS.EMAIL + "."; return; }
-  sendBtn.disabled = true; sendBtn.textContent = "Sending…";
+  if (!name || !email || !message) return say("err", t("st_missing"));
+  if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) return say("err", t("st_bademail"));
+  if (!live) return say("err", t("st_preview") + SETTINGS.EMAIL + ".");
+  sendBtn.disabled = true; sendBtn.textContent = t("st_sending");
   const topic = (form.querySelector('input[name="topic"]:checked') || {}).value || "Something else";
   try {
-    const res = await fetch(SETTINGS.FORM_ENDPOINT, { method: "POST", headers: { "Content-Type": "application/json", "Accept": "application/json" },
-      body: JSON.stringify({ name, email, company: form.company.value.trim(), topic, message, _subject: "New message from your website: " + topic, newsletter: form.newsletter.checked ? "Yes" : "No", source: "Website form", _template: "table", _captcha: "false", _honey: form._honey.value }) });
-    if (!res.ok) throw new Error(res.status);
+    // Plain form encoding keeps this a simple request (no CORS preflight), which Google Apps Script needs.
+    const body = new URLSearchParams({ name, email, company: form.company.value.trim(), topic, message,
+      newsletter: form.newsletter.checked ? "Yes" : "No", lang, _honey: form._honey.value });
+    const res = await fetch(SETTINGS.FORM_ENDPOINT, { method: "POST", body });
+    const data = await res.json();
+    if (!data.ok) throw new Error(data.error || "error");
     form.reset(); document.getElementById("t-other").checked = true;
-    status.className = "status ok"; status.textContent = "Thank you, " + name.split(" ")[0] + "! I got your message and I'll reply soon.";
-  } catch (_) { status.className = "status err"; status.textContent = "The message couldn't be sent. Please write to " + SETTINGS.EMAIL + "."; }
-  finally { sendBtn.disabled = false; sendBtn.textContent = "Send message"; }
+    say("ok", t("st_ok").replace("{name}", name.split(" ")[0]));
+  } catch (_) { say("err", t("st_err") + SETTINGS.EMAIL + "."); }
+  finally { sendBtn.disabled = false; sendBtn.textContent = t("send"); }
 });
 </script>
 
